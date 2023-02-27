@@ -1,6 +1,6 @@
 <h1> Busca Hotel </h1>
 
-<p> Futuramente irei colocar a descrição! </p>
+<p> Um sistema de busca de quartos de hotel utilizando Java e banco de dados MySQL </p>
 
 <h2> Tecnologias </h2>
 
