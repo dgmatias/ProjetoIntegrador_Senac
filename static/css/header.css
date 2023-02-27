@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.header-container {
+    background-color: #003b95;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 13vh;
+}
+
+.logo-header {
+    color: white;
+    font-size: 32px;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-item-container {
+    /* background-color: aqua; */
+    display: inline-flex;
+}
+
+.item-header {
+    color: white;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 2rem;
+    text-decoration: none;
+}
+
+.item-header:hover {
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+
+    .logo-header {
+        font-size: 25px;
+    }
+
+    .item-header {
+        font-size: 18px;
+        padding: .5rem;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .logo-header {
+        font-size: 22px;
+    }
+
+    .item-header {
+        font-size: 13px;
+        padding: .5rem;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    /* .header-container {
+        background-color: greenyellow;
+    } */
+
+    .logo-header {
+
+        font-size: 15px;
+        
+    }
+
+    .item-header {
+        font-size: 9px;
+        /* padding:  .2rem; */
+    }
+
+}
+
+
+
