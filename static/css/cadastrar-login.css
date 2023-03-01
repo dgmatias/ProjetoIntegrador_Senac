@@ -2,7 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-* {
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
+body {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -19,8 +21,31 @@
 
 .left-container {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* background-image: url(../img/login-cadastro_resized.jpg); */
     background-color: #003b95;
+}
+
+.left-content h1 {
+    font-size: 300%;
+    color: white;
+    font-family: 'Marcellus SC', serif;
+    margin-bottom: 30px;
+}
+
+.left-content button {
+    background-color: #003b95;
+    border-color: white;
+    border-radius: 100px;
+}
+
+.left-content button a {
+    text-decoration: none;
+    padding: 1.3rem;
+    color: white;
+    font-size: 17px;
 }
 
 .right-container {
@@ -48,7 +73,7 @@
     /* background-color: blueviolet; */
 }
 
-.login-container h1 {
+.login-container h2 {
     margin-top: 40px;
     font-size: 40px;
     margin-bottom: 40%;
