@@ -12,29 +12,44 @@
     display: grid;
     grid-template-columns: 1fr 1.3fr;
     grid-template-areas: 
-    "img-container img-container login-container login-container";
+    "left-container left-container right-container right-container";
 }
 
-/* Img-Container */
+/* Left-Container */
 
-.img-container {
+.left-container {
     height: 100vh;
     /* background-image: url(../img/login-cadastro_resized.jpg); */
     background-color: #003b95;
 }
 
+.right-container {
+    height: 100vh;
+}
+
+.right-container a , .login-container a {
+    color: #003b95;
+    font-size: 90%;
+    text-decoration: none;
+    margin-bottom: 100px;
+}
+
+.right-container a:hover , .login-container a:hover {
+    font-weight: bold;
+}
+
 /* login-container */
 
 .login-container {
-    display: flex;
+    display: flex; 
+    justify-content: center; 
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
+    flex-direction: column;    
     /* background-color: blueviolet; */
 }
 
 .login-container h1 {
+    margin-top: 40px;
     font-size: 40px;
     margin-bottom: 40%;
 }
@@ -67,14 +82,3 @@ label {
     font-weight: bold;
 }
 
-
-.login-container a {
-    color: #003b95;
-    font-size: 100%;
-    text-decoration: none;
-}
-
-.login-container a:hover {
-    
-    font-weight: bold;
-}
