@@ -1,0 +1,80 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Grid-Container */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    grid-template-areas: 
+    "img-container img-container login-container login-container";
+}
+
+/* Img-Container */
+
+.img-container {
+    height: 100vh;
+    /* background-image: url(../img/login-cadastro_resized.jpg); */
+    background-color: #003b95;
+}
+
+/* login-container */
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    /* background-color: blueviolet; */
+}
+
+.login-container h1 {
+    font-size: 40px;
+    margin-bottom: 40%;
+}
+
+label {
+    font-size: 110%;
+}
+
+.input-form {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 110%;
+    margin-bottom: 15%;
+}
+
+.input-submit {
+    border-color: #003b95;
+    border-radius: 100px;
+    background-color: #003b95;
+    color: white;
+    cursor: pointer;
+    font-size: 100%;
+    margin-bottom: 15%;
+    width: 115%;
+    padding: 3%;
+}
+
+.input-submit:hover {
+    font-weight: bold;
+}
+
+
+.login-container a {
+    color: #003b95;
+    font-size: 100%;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    
+    font-weight: bold;
+}

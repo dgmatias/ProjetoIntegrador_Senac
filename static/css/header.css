@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
 .header-container {
     background-color: #003b95;
     display: flex;
@@ -11,7 +13,8 @@
 .logo-header {
     color: white;
     font-size: 32px;
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Nixie One', cursive; */
+    font-family: 'Marcellus SC', serif;
     text-decoration: none;
     font-weight: bold;
 }
@@ -23,7 +26,7 @@
 
 .item-header {
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Open Sans', sans-serif;
     padding: 2rem;
     text-decoration: none;
