@@ -2,6 +2,18 @@
 
 <p> Um sistema de busca de quartos de hotel utilizando Java e banco de dados MySQL </p>
 
+<h2> Como iniciar o projeto </h2>
+
+<ul> 
+
+  <li> Criar uma pasta com o nome "WEB-INF" dentro do projeto (Obs: essa pasta "WEB-INF" tem que está vazia). </li> <br>
+  
+  <li> Dentro do PhpMyAdmin, colar o código.txt que está dentro da pasta SQL. </li> <br>
+  
+  <li> Dentro do NetBeans, adicionar na pasta Libraries os arquivos que estão dentro da pasta Arquivos-NetBeans  </li> <br>
+
+</ul>
+
 <h2> Tecnologias </h2>
 
 <ul> 
