@@ -1,0 +1,48 @@
+/* Fonts */
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
+/* Body */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Content */
+
+.container {
+    padding: 40px;
+}
+
+.content h1 {
+    font-size: 40px;
+}
+
+/* Form container */
+
+.input-container {
+    padding: .5rem;
+    display: inline;
+    width: 90px;
+    border: 1px solid black;
+}
+
+.input-form {
+    padding: .5rem;
+    width: 90px;
+    border: none;
+}
+
+.input-submit {
+    background-color:#003b95;
+    border: 1px solid black;
+    color: white;
+    
+    cursor: pointer;
+    font-size: 19px;
+    padding: .5rem;
+}
