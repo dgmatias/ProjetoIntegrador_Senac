@@ -32,6 +32,7 @@ body {
 }
 
 .input-form {
+    outline: none!important;
     padding: .5rem;
     width: 90px;
     border: none;
