@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./static/css/header.css">
-    <link rel="stylesheet" href="./static/css/reset.css">
+    <link rel="stylesheet" href="assets//static/css/header.css">
+    <link rel="stylesheet" href="assets//static/css/reset.css">
+    <script defer src="assets/js/header.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -22,7 +23,7 @@
     
                 <div class="header-logo-container"> 
                     
-                    <div>  <a href="" class="logo-header"> Busca Hoteis </a> </div>
+                    <div>  <a href="index.html" class="logo-header"> Busca Hoteis </a> </div>
 
                 </div>
                 
@@ -34,11 +35,22 @@
         
                     <div> <a href="" class="item-header"> Favoritos </a> </div>
 
+                    <div class="menu-icon"> <button onclick="showMenu()"> <img class="icon" src="assets/static/img/menu_white_36dp.svg" alt=""> </button> </div>
+
                 </div>
-    
     
             </div>
 
+            <div class="container-menu-mobile">
+
+                <div cl> <a href="anunciar.html" class="item-mobile"> Anuncie a sua propriedade </a> </div>
+        
+                    <div> <a href="login.html" class="item-mobile"> Login </a> </div>
+        
+                    <div> <a href="" class="item-mobile"> Favoritos </a> </div>
+
+            </div>
+            
         </nav>
 
     </header>

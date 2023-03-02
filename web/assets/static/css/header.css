@@ -36,6 +36,29 @@
     font-weight: bold;
 }
 
+/* Menu mobile */
+
+
+
+.container-menu-mobile {
+    display: none;
+    background-color: #003b95;
+    text-align: center;
+    height: 10vh;
+}
+
+.item-mobile {
+    color: white;
+    font-size: 10 px;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+
+.menu-icon {
+    
+    display: none;
+}
+
 @media (max-width: 900px) {
 
     .logo-header {
@@ -62,7 +85,7 @@
 
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
 
     /* .header-container {
         background-color: greenyellow;
@@ -75,8 +98,20 @@
     }
 
     .item-header {
-        font-size: 9px;
-        /* padding:  .2rem; */
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-icon button {
+        border: none;
+        background-color: transparent;
+    }
+
+    .open {
+        display: block;
     }
 
 }
