@@ -32,7 +32,13 @@ body {
     font-size: 300%;
     color: white;
     font-family: 'Marcellus SC', serif;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.left-container h2 {
+    color: white;
+    font-size: 110%;
+    margin-bottom: 20px;
 }
 
 .left-content button {
@@ -48,8 +54,18 @@ body {
     font-size: 17px;
 }
 
+/* Right Container */
+
 .right-container {
     height: 100vh;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;    
+}
+
+.a-right {
+    margin-top: 20px;
 }
 
 .right-container a , .login-container a {
@@ -66,10 +82,7 @@ body {
 /* login-container */
 
 .login-container {
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    flex-direction: column;    
+    
     /* background-color: blueviolet; */
 }
 
