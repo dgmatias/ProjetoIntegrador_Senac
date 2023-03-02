@@ -1,0 +1,73 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
+/* Body */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Flex-Container */
+
+.flex-container {
+    min-height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+.flex-content h1 {
+    color: #003b95;
+    font-family: 'Marcellus SC', serif;
+    font-size: 250%;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Form-Container */
+
+.form-container h2 {
+    font-size: 150%;  
+    margin-bottom: 30px;  
+}
+
+.form-container label {
+    font-size: 120%;
+}
+
+.input-form {
+    margin-top: 7px;
+    margin-bottom: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.input-submit {
+    background-color: #003b95;
+    border-color: white;
+    border-radius: 100px;
+    color: white;
+    cursor: pointer;
+    font-size: 100%;
+    font-weight: bold;
+    padding: .5rem;
+    width: 80%;   
+}
+
+.input-submit:hover {
+    /* transition: .1s; */
+    transform:scale(1.1);
+}
+
+.form-container a {
+    color: #003b95;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
