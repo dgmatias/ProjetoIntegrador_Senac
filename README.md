@@ -10,7 +10,7 @@
   
   <li> Dentro do PhpMyAdmin, colar o código.txt que está dentro da pasta SQL. </li> <br>
   
-  <li> dentro do NetBeans, adicionar na pasta Libraries os arquivos que estão dentros da pasta Arquivos-NetBeans  </li> <br>
+  <li> Dentro do NetBeans, adicionar na pasta Libraries os arquivos que estão dentros da pasta Arquivos-NetBeans  </li> <br>
 
 </ul>
 
