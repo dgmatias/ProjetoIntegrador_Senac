@@ -97,6 +97,7 @@ label {
 }
 
 .input-form {
+    outline: none;
     border-top: none;
     border-left: none;
     border-right: none;

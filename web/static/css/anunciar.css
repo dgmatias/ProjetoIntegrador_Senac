@@ -41,6 +41,7 @@ body {
 }
 
 .input-form {
+    outline: none;
     margin-top: 7px;
     margin-bottom: 20px;
     border-top: none;
