@@ -22,12 +22,16 @@ public class HotelDAO {
     ArrayList<HotelDTO> lista = new ArrayList<>();
     
     public void CadastrarHotel (HotelDTO hotelDTO) throws ClassNotFoundException, SQLException{
-        String sql = "INSERT INTO cleinte () VALUES ()";
-        conn = new ConexaoDAO().conexaoBD();
+        String sql = "INSERT INTO hotel (hotel_nome, hotel_local, hotel_descricao, hotel_cpnj, hotel_reserva) VALUES (?, ?, ?, ?, ?)";
+        conn = new ConexaoDAO().conexaoDB();
         
         try{
             pstm = conn.prepareStatement(sql);
-            //pstm.setString (2, clienteDTO.getClienteNome());
+            pstm.setString (2, hotelDTO.getHotel_nome());
+            pstm.setString(3, hotelDTO.getHotel_local());
+            pstm.setString(4, hotelDTO.getHotel_descricao());
+            pstm.setString(5, hotelDTO.getHotel_cpnj());
+            pstm.setString(6, hotelDTO.getHotel_reserva());
             pstm.execute();
             pstm.close();
         
@@ -37,25 +41,36 @@ public class HotelDAO {
     }
     
     public ArrayList<HotelDTO> PesquisarHotel() throws ClassNotFoundException, SQLException{
-        String sql = "SELECT * FROM cliente";
-        conn = new ConexaoDAO().conexaoBD();
+        String sql = "SELECT * FROM hotel";
+        conn = new ConexaoDAO().conexaoDB();
         
         try{
             pstm = conn.prepareStatement(sql);
             rs = pstm.executeQuery(sql);
                 
             for (int i = 0; rs.next(); i++){
-                HotelDTO clienteDTO = new HotelDTO();
-                //clienteDTO.setClienteId(rs.getInt("cliente_id"));
+                HotelDTO hotelDTO = new HotelDTO();
+                hotelDTO.setHotel_id(rs.getInt("hotel_id"));
+                hotelDTO.setHotel_nome(rs.getString("hotel_nome"));
+                hotelDTO.setHotel_local(rs.getString("hotel_local"));
+                hotelDTO.setHotel_descricao(rs.getString("hotel_descricao"));
+                hotelDTO.setHotel_cpnj(rs.getString("hotel_cpnj"));
+                hotelDTO.setHotel_reserva(rs.getString("hotel_reserva"));
+                
                     
-                lista.add(clienteDTO);
+                lista.add(hotelDTO);
             }
                 
             while (rs.next()){
-                HotelDTO clienteDTO = new HotelDTO();
-                //clienteDTO.setClienteId(rs.getInt("cliente_id"));
+                HotelDTO hotelDTO = new HotelDTO();
+                hotelDTO.setHotel_id(rs.getInt("hotel_id"));
+                hotelDTO.setHotel_nome(rs.getString("hotel_nome"));
+                hotelDTO.setHotel_local(rs.getString("hotel_local"));
+                hotelDTO.setHotel_descricao(rs.getString("hotel_descricao"));
+                hotelDTO.setHotel_cpnj(rs.getString("hotel_cpnj"));
+                hotelDTO.setHotel_reserva(rs.getString("hotel_reserva"));
                     
-                lista.add(clienteDTO);
+                lista.add(hotelDTO);
             }
             pstm.close();
             
@@ -65,8 +80,8 @@ public class HotelDAO {
         return lista;
     }
     public void AlterarHotel(HotelDTO hotelDTO) throws ClassNotFoundException{
-        String sql = "UPDATE cliente SET , , ,";
-        conn = new ConexaoDAO().conexaoBD();
+        String sql = "UPDATE hotel SET , , ,";
+        conn = new ConexaoDAO().conexaoDB();
             
         try{
             pstm = conn.prepareStatement(sql);
@@ -81,12 +96,17 @@ public class HotelDAO {
     }
         
     public void ExcluirHotel(HotelDTO hotelDTO) throws ClassNotFoundException{
-        String sql = "DELETE FROM cliente WHERE id = ?";
-        conn = new ConexaoDAO().conexaoBD();
+        String sql = "DELETE FROM hotel WHERE id = ?";
+        conn = new ConexaoDAO().conexaoDB();
             
         try{
             pstm = conn.prepareStatement(sql);
-            //pstm.setInt(1, clienteDTO.getClienteId());
+            pstm.setString (2, hotelDTO.getHotel_nome());
+            pstm.setString(3, hotelDTO.getHotel_local());
+            pstm.setString(4, hotelDTO.getHotel_descricao());
+            pstm.setString(5, hotelDTO.getHotel_cpnj());
+            pstm.setString(6, hotelDTO.getHotel_reserva());
+            
             pstm.execute();
             pstm.close();
             

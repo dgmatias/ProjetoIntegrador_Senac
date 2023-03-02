@@ -1,4 +1,4 @@
-package br.com.estoque.DAO;
+package br.com.hotel.DAO;
 
 //Importando as bibliotecas
 

@@ -18,12 +18,14 @@ public class AdminDAO {
     PreparedStatement pstm;
     
     public void CadastrarAdmin (AdminDTO adminDTO) throws ClassNotFoundException, SQLException{
-        String sql = "INSERT INTO admin (admin_nome, admin_senha) VALUES (?, ?)";
-        conn = new ConexaoDAO().conexaoBD();
+        String sql = "INSERT INTO admin (admin_nome, admin_senha, admin_email) VALUES (?, ?, ?)";
+        conn = new ConexaoDAO().conexaoDB();
         
         try{
             pstm = conn.prepareStatement(sql);
-            //pstm.setString (2, clienteDTO.getClienteNome());
+            pstm.setString (2, adminDTO.getAdmin_nome());
+            pstm.setString(3, adminDTO.getAdmin_senha());
+            pstm.setString(4, adminDTO.getAdmin_email());
             pstm.execute();
             pstm.close();
         
@@ -50,11 +52,14 @@ public class AdminDAO {
         
     public void ExcluirAdmin(AdminDTO adminDTO) throws ClassNotFoundException{
         String sql = "DELETE FROM cliente WHERE id = ?";
-        conn = new ConexaoDAO().conexaoBD();
+        conn = new ConexaoDAO().conexaoDB();
             
         try{
             pstm = conn.prepareStatement(sql);
-            //pstm.setInt(1, clienteDTO.getClienteId());
+            pstm.setInt(1, adminDTO.getAdmin_id());
+            pstm.setString (2, adminDTO.getAdmin_nome());
+            pstm.setString(3, adminDTO.getAdmin_senha());
+            pstm.setString(4, adminDTO.getAdmin_email());
             pstm.execute();
             pstm.close();
             

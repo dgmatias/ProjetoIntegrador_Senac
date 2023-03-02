@@ -22,12 +22,16 @@ public class ClienteDAO {
     ArrayList<ClienteDTO> lista = new ArrayList<>();
     
     public void CadastrarCliente (ClienteDTO clienteDTO) throws ClassNotFoundException{
-        String sql = "INSERT INTO cliente () VALUES ()";
-        conn = new ConexaoDAO().conexaoBD();
+        String sql = "INSERT INTO cliente (cliente_nome, cliente_email, cliente_senha, cliente_cpf, cliente_reserva) VALUES (?, ?, ?, ?, ?)";
+        conn = new ConexaoDAO().conexaoDB();
         
         try{
             pstm = conn.prepareStatement(sql);
-            //pstm.setString (2, clienteDTO.getClienteNome());
+            pstm.setString (2, clienteDTO.getCliente_nome());
+            pstm.setString(3, clienteDTO.getCliente_email());
+            pstm.setString(4, clienteDTO.getCliente_senha());
+            pstm.setString(5, clienteDTO.getCliente_cpf());
+            pstm.setString(6, clienteDTO.getCliente_reserva());
             pstm.execute();
             pstm.close();
         
@@ -38,7 +42,7 @@ public class ClienteDAO {
     
     public ArrayList<ClienteDTO> PesquisarCliente() throws ClassNotFoundException, SQLException{
         String sql = "SELECT * FROM cliente";
-        conn = new ConexaoDAO().conexaoBD();
+        conn = new ConexaoDAO().conexaoDB();
         
         try{
             pstm = conn.prepareStatement(sql);
@@ -46,14 +50,24 @@ public class ClienteDAO {
                 
             for (int i = 0; rs.next(); i++){
                 ClienteDTO clienteDTO = new ClienteDTO();
-                //clienteDTO.setClienteId(rs.getInt("cliente_id"));
+                clienteDTO.setCliente_id(rs.getInt("cliente_id"));
+                clienteDTO.setCliente_nome(rs.getString("cliente_nome"));
+                clienteDTO.setCliente_email(rs.getString("cliente_email"));
+                clienteDTO.setCliente_senha(rs.getString("cliente_senha"));
+                clienteDTO.setCliente_cpf(rs.getString("cliente_cpf"));
+                clienteDTO.setCliente_reserva(rs.getString("cliente_reserva"));
                     
                 lista.add(clienteDTO);
             }
                 
             while (rs.next()){
                 ClienteDTO clienteDTO = new ClienteDTO();
-                //clienteDTO.setClienteId(rs.getInt("cliente_id"));
+                clienteDTO.setCliente_id(rs.getInt("cliente_id"));
+                clienteDTO.setCliente_nome(rs.getString("cliente_nome"));
+                clienteDTO.setCliente_email(rs.getString("cliente_email"));
+                clienteDTO.setCliente_senha(rs.getString("cliente_senha"));
+                clienteDTO.setCliente_cpf(rs.getString("cliente_cpf"));
+                clienteDTO.setCliente_reserva(rs.getString("cliente_reserva"));
                     
                 lista.add(clienteDTO);
             }
@@ -65,12 +79,17 @@ public class ClienteDAO {
         return lista;
     }
     public void AlterarCliente(ClienteDTO clienteDTO) throws ClassNotFoundException{
-        String sql = "UPDATE cliente SET , , ,";
-        conn = new ConexaoDAO().conexaoBD();
+        String sql = "UPDATE cliente SET cliente_nome = ?, cliente_email = ?, cliente_senha = ?, cliente_cpf = ?, cliente_reserva = ? WHERE cliente_id = ?";
+        conn = new ConexaoDAO().conexaoDB();
             
         try{
             pstm = conn.prepareStatement(sql);
-            //pstm.setInt(1, clienteDTO.getClienteId());
+            pstm.setInt(1, clienteDTO.getCliente_id());
+            pstm.setString (2, clienteDTO.getCliente_nome());
+            pstm.setString(3, clienteDTO.getCliente_email());
+            pstm.setString(4, clienteDTO.getCliente_senha());
+            pstm.setString(5, clienteDTO.getCliente_cpf());
+            pstm.setString(6, clienteDTO.getCliente_reserva());
                 
             pstm.execute();
             pstm.close();
@@ -82,11 +101,16 @@ public class ClienteDAO {
         
     public void ExcluirCliente(ClienteDTO clienteDTO) throws ClassNotFoundException{
         String sql = "DELETE FROM cliente WHERE id = ?";
-        conn = new ConexaoDAO().conexaoBD();
+        conn = new ConexaoDAO().conexaoDB();
             
         try{
             pstm = conn.prepareStatement(sql);
-            //pstm.setInt(1, clienteDTO.getClienteId());
+            pstm.setInt(1, clienteDTO.getCliente_id());
+            pstm.setString (2, clienteDTO.getCliente_nome());
+            pstm.setString(3, clienteDTO.getCliente_email());
+            pstm.setString(4, clienteDTO.getCliente_senha());
+            pstm.setString(5, clienteDTO.getCliente_cpf());
+            pstm.setString(6, clienteDTO.getCliente_reserva());
             pstm.execute();
             pstm.close();
             
