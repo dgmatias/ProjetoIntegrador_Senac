@@ -47,19 +47,19 @@
     
                     <div class="form-container">
     
-                        <form action="">
+                        <form method="post" action="loginAction.jsp">
     
                             <label for="">
                                 Email: <br>
                             </label>
     
-                            <input class="input-form" type="email"> <br>
+                            <input name="email" class="input-form" type="email"> <br>
     
                             <label for="">
                                 Senha: <br>
                             </label>
     
-                            <input class="input-form" type="password"> <br>
+                            <input name="senha" class="input-form" type="password"> <br>
     
                             <input class="input-submit" value="Logar" type="submit">
     
