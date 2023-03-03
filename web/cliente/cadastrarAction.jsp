@@ -28,7 +28,7 @@
                 
                 clienteDAO.CadastrarCliente(clienteDTO);
             
-                response.sendRedirect("login.html");
+                response.sendRedirect("login.jsp");
             
             } catch(Exception e) {
                 System.out.println("Erro " + e);
