@@ -23,7 +23,7 @@ public class ClienteDAO {
     ArrayList<ClienteDTO> lista = new ArrayList<>();
     
     public void CadastrarCliente (ClienteDTO clienteDTO) throws ClassNotFoundException{
-        String sql = "INSERT INTO cliente (cliente_nome, cliente_email, cliente_senha, cliente_cpf) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO cliente (cliente_id, cliente_nome, cliente_email, cliente_senha, cliente_cpf) VALUES (?, ?, ?, ?, ?)";
         conn = new ConexaoDAO().conexaoDB();
         
         try{

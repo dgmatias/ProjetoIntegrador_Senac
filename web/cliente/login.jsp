@@ -1,3 +1,12 @@
+<%-- 
+    Document   : login
+    Created on : 3 de mar. de 2023, 09:42:44
+    Author     : Diego
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -58,7 +67,7 @@
     
                     </div>
     
-                    <span> <a href="cadastrar.html"> Ainda não tem uma conta ? </a> </span>
+                    <span> <a href="cadastrar.jsp"> Ainda não tem uma conta ? </a> </span>
     
                 </div>
 

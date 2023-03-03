@@ -1,3 +1,11 @@
+<%-- 
+    Document   : cadastrar
+    Created on : 3 de mar. de 2023, 09:40:54
+    Author     : Diego
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,7 +30,7 @@
 
                     <div> <h2>  Viage sem se preocupar. </h2> </div>                    
 
-                    <div> <button> <a href="index.html"> Voltar ao inicio </a> </button> </div>
+                    <div> <button> <a href="../index.html"> Voltar ao inicio </a> </button> </div>
 
                 </div>
 
@@ -68,7 +76,7 @@
         
                     </div>
 
-                    <span> <a href="login.html"> Já tem uma conta ? </a> </span> 
+                    <span> <a href="login.jsp"> Já tem uma conta ? </a> </span> 
 
                 </div>
 
