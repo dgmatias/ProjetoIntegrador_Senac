@@ -1,0 +1,11 @@
+CREATE DATABASE hotel_db;
+
+USE hotel_db;
+
+CREATE TABLE cliente (
+	cliente_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+	cliente_nome VARCHAR(100) NOT NULL,
+    cliente_email VARCHAR(100) NOT NULL,
+    cliente_senha VARCHAR(100) NOT NULL,
+    cliente_cpf VARCHAR(100) NOT NULL
+);
