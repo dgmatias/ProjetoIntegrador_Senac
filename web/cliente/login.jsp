@@ -53,13 +53,13 @@
                                 Email: <br>
                             </label>
     
-                            <input name="email" class="input-form" type="email"> <br>
+                            <input required name="email" class="input-form" type="email"> <br>
     
                             <label for="">
                                 Senha: <br>
                             </label>
     
-                            <input name="senha" class="input-form" type="password"> <br>
+                            <input required name="senha" class="input-form" type="password"> <br>
     
                             <input class="input-submit" value="Logar" type="submit">
     

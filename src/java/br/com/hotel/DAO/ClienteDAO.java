@@ -24,13 +24,14 @@ public class ClienteDAO {
     
     public void CadastrarCliente (ClienteDTO clienteDTO) throws ClassNotFoundException{            
         
-        String sql = "Select * from cliente where cliente_email = ? ";        
+        String sql = "Select * from cliente where cliente_email = ? OR cliente_cpf = ? ";        
              
         try{
             conn = new ConexaoDAO().conexaoDB();
             
             pstm = conn.prepareStatement(sql);
             pstm.setString(1, clienteDTO.getClienteEmail() );
+            pstm.setString(2, clienteDTO.getClienteCpf() );            
             rs = pstm.executeQuery();            
             
             if(!rs.next() ) {
@@ -55,30 +56,33 @@ public class ClienteDAO {
         
     } // fim
 
-////    public void LogarCliente (ClienteDTO clienteDTO) throws ClassNotFoundException {
-////        
-////        String sql = "Select * from cliente where cliente_email = ?";        
-////        conn = new ConexaoDAO().conexaoDB();
-////        
-////        try {
-////            pstm = conn.prepareStatement(sql);
-////            pstm.setString(1, clienteDTO.getClienteEmail() );
-////            
-////            rs = pstm.executeQuery(sql);
-////            
-////            if(rs.getRow() != 0 ) {
-////                String resultado = rs.getString("cliente_senha");
-////                
-////                if(password_verify(clienteDTO.getClienteSenha(), resultado) )
-////                
-////                
-////            }                        
-////                      
-////        } catch(SQLException e) {
-////            
-////        }
-////        
-////    } // fim
+    public void LogarCliente (ClienteDTO clienteDTO) throws ClassNotFoundException {
+        
+        String sql = "Select * from cliente where cliente_email = ?";                
+        
+        try {
+            conn = new ConexaoDAO().conexaoDB();
+            
+            pstm = conn.prepareStatement(sql);
+            pstm.setString(1, clienteDTO.getClienteEmail() );
+            rs = pstm.executeQuery();                                     
+            
+            if(rs.next()) {                                
+                
+                String resultado  = rs.getString("cliente_senha");
+                
+                if(clienteDTO.getClienteSenha() === resultado); {
+                    
+                }
+                
+                
+            }                        
+                      
+        } catch(SQLException e) {
+            
+        }
+        
+    } // fim
     
     
 }    

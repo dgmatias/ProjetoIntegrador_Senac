@@ -50,25 +50,25 @@
                                     Nome: <br>
                                 </label>
         
-                                <input name="nome" class="input-form" type="text"> <br>                                        
+                            <input required name="nome" class="input-form" type="text"> <br>                                        
         
                                 <label for="">
                                     Email: <br>
                                 </label>
         
-                                <input name="email" class="input-form" type="email"> <br>
+                            <input required name="email" class="input-form" type="email"> <br>
         
                                 <label for="">
                                     Senha: <br>
                                 </label>
         
-                                <input name="senha" class="input-form" type="password"> <br>
+                            <input required name="senha" class="input-form" type="password"> <br>
                                 
                                 <label for="">
                                     Cpf: <br>
                                 </label>
         
-                                <input name="cpf" class="input-form" type="text"> <br>
+                            <input required name="cpf" class="input-form" type="text"> <br>
         
                                 <input class="input-submit" value="Cadastrar" type="submit">
         
