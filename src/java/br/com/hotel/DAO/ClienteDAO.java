@@ -22,23 +22,65 @@ public class ClienteDAO {
     ResultSet rs;
     ArrayList<ClienteDTO> lista = new ArrayList<>();
     
-    public void CadastrarCliente (ClienteDTO clienteDTO) throws ClassNotFoundException{
-        String sql = "INSERT INTO cliente (cliente_nome, cliente_email, cliente_senha, cliente_cpf) VALUES (?, ?, SHA2(?, 256), ?)";
-        conn = new ConexaoDAO().conexaoDB();
+    public void CadastrarCliente (ClienteDTO clienteDTO) throws ClassNotFoundException{            
         
+        String sql = "Select * from cliente where cliente_email = ? ";        
+             
         try{
-            pstm = conn.prepareStatement(sql);
-            pstm.setString (1, clienteDTO.getClienteNome());
-            pstm.setString(2, clienteDTO.getClienteEmail());
-            pstm.setString(3, clienteDTO.getClienteSenha());
-            pstm.setString(4, clienteDTO.getClienteCpf());         
-            pstm.execute();
-            pstm.close();
-        
-        }catch(SQLException e){
+            conn = new ConexaoDAO().conexaoDB();
             
-        }
-    }    
+            pstm = conn.prepareStatement(sql);
+            pstm.setString(1, clienteDTO.getClienteEmail() );
+            rs = pstm.executeQuery();            
+            
+            if(!rs.next() ) {
+                
+                String sql2 = "INSERT INTO cliente (cliente_nome, cliente_email, cliente_senha, cliente_cpf) VALUES (?, ?, SHA2(?, 256), ?)"; 
+                
+                pstm = conn.prepareStatement(sql2);                
+                pstm.setString (1, clienteDTO.getClienteNome());
+                pstm.setString(2, clienteDTO.getClienteEmail());                
+                pstm.setString(3, clienteDTO.getClienteSenha());
+                pstm.setString(4, clienteDTO.getClienteCpf());   
+                
+                pstm.execute();
+                pstm.close();
+
+            } 
+            
+                    
+            }catch(SQLException e){                        
+      
+            }                
+        
+    } // fim
+
+////    public void LogarCliente (ClienteDTO clienteDTO) throws ClassNotFoundException {
+////        
+////        String sql = "Select * from cliente where cliente_email = ?";        
+////        conn = new ConexaoDAO().conexaoDB();
+////        
+////        try {
+////            pstm = conn.prepareStatement(sql);
+////            pstm.setString(1, clienteDTO.getClienteEmail() );
+////            
+////            rs = pstm.executeQuery(sql);
+////            
+////            if(rs.getRow() != 0 ) {
+////                String resultado = rs.getString("cliente_senha");
+////                
+////                if(password_verify(clienteDTO.getClienteSenha(), resultado) )
+////                
+////                
+////            }                        
+////                      
+////        } catch(SQLException e) {
+////            
+////        }
+////        
+////    } // fim
+    
+    
 }    
     
 //    public ArrayList<ClienteDTO> PesquisarCliente() throws ClassNotFoundException, SQLException{
