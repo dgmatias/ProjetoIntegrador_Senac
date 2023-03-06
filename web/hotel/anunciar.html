@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/static/css/anunciar.css">
-    <link rel="stylesheet" href="assets/static/css/reset.css">
+    <link rel="stylesheet" href="../assets/static/css/anunciar.css">
+    <link rel="stylesheet" href="../assets/static/css/reset.css">
     <title>Anunciar a sua empresa</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
             <div> <h1> Busca Hoteis </h1> </div>
     
             
-            <div class="form-container">
+            <form method="post" action="anunciarAction.jsp" class="form-container">
 
                 <div> <h2> Anuncie a sua empresa </h2> </div>
 
@@ -25,13 +25,13 @@
                     Cnpj: <br>
                 </label>
 
-                <input  class="input-form" type="text"> <br>
+                <input name="cnpj"  class="input-form" type="text"> <br>
 
                 <label for="">
                     Nome: <br>
                 </label>
 
-                <input class="input-form" type="text"> <br>
+                <input name="nome" class="input-form" type="text"> <br>
 
                 <div> <h2> Crie um administrador </h2> </div>
 
@@ -55,9 +55,9 @@
 
                 <input value="Cadastrar" class="input-submit" type="submit"> <br> <br>
 
-                <a href="index.html"> Página inicial </a>
+                <a href="../index.html"> Página inicial </a>
 
-            </div> 
+            </form> 
 
 
         </div>

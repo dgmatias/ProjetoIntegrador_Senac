@@ -11,6 +11,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import jakarta.servlet.http.HttpSession;
+
 /**
  *
  * @author 51127512021.2
@@ -56,33 +58,38 @@ public class ClienteDAO {
         
     } // fim
 
-    public void LogarCliente (ClienteDTO clienteDTO) throws ClassNotFoundException {
+//    public void LogarCliente (ClienteDTO clienteDTO) throws ClassNotFoundException {
+//        
+//        String sql = "Select * from cliente where cliente_email = ?";                
+//        
+//        try {
+//            conn = new ConexaoDAO().conexaoDB();
+//            
+//            pstm = conn.prepareStatement(sql);
+//            pstm.setString(1, clienteDTO.getClienteEmail() );
+//            rs = pstm.executeQuery();                                     
+//            
+//            if(rs.next()) {                                
+//                
+//                String resultado  = rs.getString("cliente_senha");
+//                
+//                if(clienteDTO.getClienteSenha().equals(resultado)); {
+//                
+//                    HttpSession session = request.getSession();
+//
+//                    session.setAttribute("id", clienteDTO.getClienteId());
+//                    
+//                   
+//                }
+//                
+//                pstm.close();
+//            }                        
+//                      
+//        } catch(SQLException e) {
+//            
+//        }
         
-        String sql = "Select * from cliente where cliente_email = ?";                
-        
-        try {
-            conn = new ConexaoDAO().conexaoDB();
-            
-            pstm = conn.prepareStatement(sql);
-            pstm.setString(1, clienteDTO.getClienteEmail() );
-            rs = pstm.executeQuery();                                     
-            
-            if(rs.next()) {                                
-                
-                String resultado  = rs.getString("cliente_senha");
-                
-                if(clienteDTO.getClienteSenha() === resultado); {
-                    
-                }
-                
-                
-            }                        
-                      
-        } catch(SQLException e) {
-            
-        }
-        
-    } // fim
+//    }  fim
     
     
 }    
