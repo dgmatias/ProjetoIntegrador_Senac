@@ -32,8 +32,8 @@ public class ClienteDAO {
             conn = new ConexaoDAO().conexaoDB();
             
             pstm = conn.prepareStatement(sql);
-            pstm.setString(1, clienteDTO.getClienteEmail() );
-            pstm.setString(2, clienteDTO.getClienteCpf() );            
+            pstm.setString(1, clienteDTO.getCliente_email() );
+            pstm.setString(2, clienteDTO.getCliente_cpf() );            
             rs = pstm.executeQuery();            
             
             if(!rs.next() ) {
@@ -41,10 +41,10 @@ public class ClienteDAO {
                 String sql2 = "INSERT INTO cliente (cliente_nome, cliente_email, cliente_senha, cliente_cpf) VALUES (?, ?, SHA2(?, 256), ?)"; 
                 
                 pstm = conn.prepareStatement(sql2);                
-                pstm.setString (1, clienteDTO.getClienteNome());
-                pstm.setString(2, clienteDTO.getClienteEmail());                
-                pstm.setString(3, clienteDTO.getClienteSenha());
-                pstm.setString(4, clienteDTO.getClienteCpf());   
+                pstm.setString (1, clienteDTO.getCliente_nome());
+                pstm.setString(2, clienteDTO.getCliente_email());                
+                pstm.setString(3, clienteDTO.getCliente_senha());
+                pstm.setString(4, clienteDTO.getCliente_cpf());   
                 
                 pstm.execute();
                 pstm.close();

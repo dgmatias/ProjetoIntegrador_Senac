@@ -13,51 +13,51 @@ public class HotelDTO {
     private String hotel_reserva;
     
     
-    public int getHotelDd(){
+    public int getHotel_id(){
         return hotel_id;
     }
     
-    public void setHotelId(int hotel_id){
+    public void setHotel_id(int hotel_id){
         this.hotel_id = hotel_id;
     }
     
-    public String getHotelNome(){
+    public String getHotel_nome(){
         return hotel_nome;
     }
     
-    public void setHotelNome(String hotel_nome){
+    public void setHotel_nome(String hotel_nome){
         this.hotel_nome = hotel_nome;
     }
     
-    public String getHotelLocal(){
+    public String getHotel_local(){
         return hotel_local;
     }
     
-    public void setHotelLocal(String hotel_local){
+    public void setHotel_local(String hotel_local){
         this.hotel_local = hotel_local;
     }
     
-    public String getHotelDescricao(){
+    public String getHotel_descricao(){
         return hotel_descricao;
     }
     
-    public void setHotelDescricao(String hotel_descricao){
+    public void setHotel_descricao(String hotel_descricao){
         this.hotel_descricao = hotel_descricao;
     }
     
-    public String getHotelCnpj(){
+    public String getHotel_cnpj(){
         return hotel_cnpj;
     }
     
-    public void setHotelCnpj(String hotel_cnpj){
+    public void setHotel_cnpj(String hotel_cnpj){
         this.hotel_cnpj = hotel_cnpj;
     }
     
-    public String getHotelReserva(){
+    public String getHotel_reserva(){
         return hotel_reserva;
     }
     
-    public void setHotelReserva(String hotel_reserva){
+    public void setHotel_reserva(String hotel_reserva){
         this.hotel_reserva = hotel_reserva;
     }
     
