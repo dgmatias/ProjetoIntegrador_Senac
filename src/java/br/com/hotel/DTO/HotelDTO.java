@@ -11,6 +11,10 @@ public class HotelDTO {
     private String hotel_descricao;
     private String hotel_cnpj;
     private String hotel_reserva;
+    private String hotel_comodos;
+    private String hotel_camas;
+    private String hotel_checkin;
+    private String hotel_checkout;
     
     
     public int getHotel_id(){
@@ -59,6 +63,38 @@ public class HotelDTO {
     
     public void setHotel_reserva(String hotel_reserva){
         this.hotel_reserva = hotel_reserva;
+    }
+    
+    public String getHotel_comodos(){
+        return hotel_comodos;
+    }
+    
+    public void setHotel_comodos(String hotel_comodos){
+        this.hotel_comodos = hotel_comodos;
+    }
+    
+    public String getHotel_camas(){
+        return hotel_camas;
+    }
+    
+    public void setHotel_camas(String hotel_camas){
+        this.hotel_camas = hotel_camas;
+    }
+    
+    public String getHotel_checkin(){
+        return hotel_checkin;
+    }
+    
+    public void setHotel_checkin(String hotel_checkin){
+        this.hotel_checkin = hotel_checkin;
+    }
+    
+    public String getHotel_checkout(){
+        return hotel_checkout;
+    }
+    
+    public void setHotel_checkout(String hotel_checkout){
+        this.hotel_checkout = hotel_checkout;
     }
     
 }
