@@ -31,6 +31,12 @@ public class HotelDAO {
             pstm = conn.prepareStatement(sql);
             pstm.setString(1, hotelDTO.getHotel_nome() );
             pstm.setString(2, hotelDTO.getHotel_cnpj() );
+            pstm.setString(3, hotelDTO.getHotel_descricao());
+            pstm.setString(4, hotelDTO.getHotel_cnpj());
+            pstm.setString(5, hotelDTO.getHotel_comodos());
+            pstm.setString(6, hotelDTO.getHotel_camas());
+            pstm.setString(7, hotelDTO.getHotel_checkin());
+            pstm.setString(8, hotelDTO.getHotel_checkout());
             rs = pstm.executeQuery();
             
             if(!rs.next() ) {
@@ -39,7 +45,13 @@ public class HotelDAO {
                 
                 pstm = conn.prepareStatement(sql2);
                 pstm.setString (1, hotelDTO.getHotel_nome());
-                pstm.setString(2, hotelDTO.getHotel_cnpj());                
+                pstm.setString (2, hotelDTO.getHotel_cnpj());
+                pstm.setString(3, hotelDTO.getHotel_descricao());
+                pstm.setString(4, hotelDTO.getHotel_cnpj());
+                pstm.setString(5, hotelDTO.getHotel_comodos());
+                pstm.setString(6, hotelDTO.getHotel_camas());
+                pstm.setString(7, hotelDTO.getHotel_checkin());
+                pstm.setString(8, hotelDTO.getHotel_checkout());
                 pstm.execute();
                 pstm.close();
             }
@@ -66,7 +78,10 @@ public class HotelDAO {
                 hotelDTO.setHotel_local(rs.getString("hotel_local"));
                 hotelDTO.setHotel_descricao(rs.getString("hotel_descricao"));
                 hotelDTO.setHotel_cnpj(rs.getString("hotel_cpnj"));
-                hotelDTO.setHotel_reserva(rs.getString("hotel_reserva"));
+                hotelDTO.setHotel_reserva(rs.getString("hotel_descricao"));
+                hotelDTO.setHotel_reserva(rs.getString("hotel_camas"));
+                hotelDTO.setHotel_reserva(rs.getString("hotel_checkin"));
+                hotelDTO.setHotel_reserva(rs.getString("hotel_checkout"));
                 
                     
                 lista.add(hotelDTO);
@@ -79,7 +94,10 @@ public class HotelDAO {
                 hotelDTO.setHotel_local(rs.getString("hotel_local"));
                 hotelDTO.setHotel_descricao(rs.getString("hotel_descricao"));
                 hotelDTO.setHotel_cnpj(rs.getString("hotel_cpnj"));
-                hotelDTO.setHotel_reserva(rs.getString("hotel_reserva"));
+                hotelDTO.setHotel_reserva(rs.getString("hotel_descricao"));
+                hotelDTO.setHotel_reserva(rs.getString("hotel_camas"));
+                hotelDTO.setHotel_reserva(rs.getString("hotel_checkin"));
+                hotelDTO.setHotel_reserva(rs.getString("hotel_checkout"));
                     
                 lista.add(hotelDTO);
             }
@@ -112,11 +130,14 @@ public class HotelDAO {
             
         try{
             pstm = conn.prepareStatement(sql);
-            pstm.setString (2, hotelDTO.getHotel_nome());
-            pstm.setString(3, hotelDTO.getHotel_local());
-            pstm.setString(4, hotelDTO.getHotel_descricao());
-            pstm.setString(5, hotelDTO.getHotel_cnpj());
-            pstm.setString(6, hotelDTO.getHotel_reserva());
+            pstm.setString (1, hotelDTO.getHotel_nome());
+            pstm.setString(2, hotelDTO.getHotel_local());
+            pstm.setString(3, hotelDTO.getHotel_descricao());
+            pstm.setString(4, hotelDTO.getHotel_cnpj());
+            pstm.setString(5, hotelDTO.getHotel_comodos());
+            pstm.setString(6, hotelDTO.getHotel_camas());
+            pstm.setString(7, hotelDTO.getHotel_checkin());
+            pstm.setString(8, hotelDTO.getHotel_checkout());
             
             pstm.execute();
             pstm.close();
