@@ -11,8 +11,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import jakarta.servlet.http.HttpSession;
-
 /**
  *
  * @author 51127512021.2
@@ -26,31 +24,20 @@ public class ClienteDAO {
     
     public void CadastrarCliente (ClienteDTO clienteDTO) throws ClassNotFoundException{            
         
-        String sql = "Select * from cliente where cliente_email = ? OR cliente_cpf = ? ";        
+        String sql = "INSERT INTO cliente (cliente_nome, cliente_email, cliente_senha, cliente_cpf) VALUES (?, ?, SHA2(?, 256), ?)";       
              
         try{
-            conn = new ConexaoDAO().conexaoDB();
-            
-            pstm = conn.prepareStatement(sql);
-            pstm.setString(1, clienteDTO.getCliente_email() );
-            pstm.setString(2, clienteDTO.getCliente_cpf() );            
-            rs = pstm.executeQuery();            
-            
-            if(!rs.next() ) {
+            conn = new ConexaoDAO().conexaoDB();                            
                 
-                String sql2 = "INSERT INTO cliente (cliente_nome, cliente_email, cliente_senha, cliente_cpf) VALUES (?, ?, SHA2(?, 256), ?)"; 
-                
-                pstm = conn.prepareStatement(sql2);                
-                pstm.setString (1, clienteDTO.getCliente_nome());
-                pstm.setString(2, clienteDTO.getCliente_email());                
-                pstm.setString(3, clienteDTO.getCliente_senha());
-                pstm.setString(4, clienteDTO.getCliente_cpf());   
-                
-                pstm.execute();
-                pstm.close();
-
-            } 
+            pstm = conn.prepareStatement(sql);   
             
+            pstm.setString (1, clienteDTO.getCliente_nome());
+            pstm.setString(2, clienteDTO.getCliente_email());                
+            pstm.setString(3, clienteDTO.getCliente_senha());
+            pstm.setString(4, clienteDTO.getCliente_cpf());   
+                
+            pstm.execute();
+            pstm.close();
                     
             }catch(SQLException e){                        
       

@@ -19,10 +19,10 @@
             try {
                 ClienteDTO clienteDTO = new ClienteDTO();
                 
-                clienteDTO.setClienteNome(request.getParameter("nome"));          
-                clienteDTO.setClienteEmail(request.getParameter("email"));
-                clienteDTO.setClienteSenha(request.getParameter("senha"));
-                clienteDTO.setClienteCpf(request.getParameter("cpf"));
+                clienteDTO.setCliente_nome(request.getParameter("nome"));          
+                clienteDTO.setCliente_email(request.getParameter("email"));
+                clienteDTO.setCliente_senha(request.getParameter("senha"));
+                clienteDTO.setCliente_cpf(request.getParameter("cpf") );
             
                 ClienteDAO clienteDAO = new ClienteDAO();
                 

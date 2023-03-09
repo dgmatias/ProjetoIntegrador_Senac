@@ -30,7 +30,7 @@
 
                     <div> <h2>  Viage sem se preocupar. </h2> </div>                    
 
-                    <div> <button> <a href="../index.html"> Voltar ao inicio </a> </button> </div>
+                    <div> <button> <a href="../index.jsp"> Voltar ao inicio </a> </button> </div>
 
                 </div>
 

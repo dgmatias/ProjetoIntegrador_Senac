@@ -8,7 +8,7 @@
 
 /* Body */
 
-body {
+main {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -20,6 +20,11 @@ body {
 
 .content h1 {
     font-size: 40px;
+}
+
+.h1-content {
+    color: red;
+
 }
 
 /* Form container */
@@ -46,4 +51,8 @@ body {
     cursor: pointer;
     font-size: 19px;
     padding: .5rem;
+}
+
+th {
+    background-color: aqua;
 }
