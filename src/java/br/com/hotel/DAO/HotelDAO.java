@@ -78,10 +78,9 @@ public class HotelDAO {
                 hotelDTO.setHotel_local(rs.getString("hotel_local"));
                 hotelDTO.setHotel_descricao(rs.getString("hotel_descricao"));
                 hotelDTO.setHotel_cnpj(rs.getString("hotel_cpnj"));
-                hotelDTO.setHotel_reserva(rs.getString("hotel_descricao"));
-                hotelDTO.setHotel_reserva(rs.getString("hotel_camas"));
-                hotelDTO.setHotel_reserva(rs.getString("hotel_checkin"));
-                hotelDTO.setHotel_reserva(rs.getString("hotel_checkout"));
+                hotelDTO.setHotel_camas(rs.getString("hotel_camas"));
+                hotelDTO.setHotel_checkin(rs.getString("hotel_checkin"));
+                hotelDTO.setHotel_checkout(rs.getString("hotel_checkout"));
                 
                     
                 lista.add(hotelDTO);
@@ -94,10 +93,9 @@ public class HotelDAO {
                 hotelDTO.setHotel_local(rs.getString("hotel_local"));
                 hotelDTO.setHotel_descricao(rs.getString("hotel_descricao"));
                 hotelDTO.setHotel_cnpj(rs.getString("hotel_cpnj"));
-                hotelDTO.setHotel_reserva(rs.getString("hotel_descricao"));
-                hotelDTO.setHotel_reserva(rs.getString("hotel_camas"));
-                hotelDTO.setHotel_reserva(rs.getString("hotel_checkin"));
-                hotelDTO.setHotel_reserva(rs.getString("hotel_checkout"));
+                hotelDTO.setHotel_camas(rs.getString("hotel_camas"));
+                hotelDTO.setHotel_checkin(rs.getString("hotel_checkin"));
+                hotelDTO.setHotel_checkout(rs.getString("hotel_checkout"));
                     
                 lista.add(hotelDTO);
             }
@@ -109,7 +107,7 @@ public class HotelDAO {
         return lista;
     }
     public void AlterarHotel(HotelDTO hotelDTO) throws ClassNotFoundException{
-        String sql = "UPDATE hotel SET , , ,";
+        String sql = "UPDATE hotel SET hotel_nome = ?, hotel_local = ?, hotel_descricao = ?, hotel_cnpj = ?, hotel_camas = ? WHERE hotel_id = ?";
         conn = new ConexaoDAO().conexaoDB();
             
         try{
